@@ -155,7 +155,7 @@ const certificationData = {
     date: 'December 2024',
     description: 'Comprehensive course covering AI fundamentals and generative AI technologies.',
     skills: ['Generative AI', 'Machine Learning', 'AI Ethics', 'Neural Networks'],
-    image: 'https://play-lh.googleusercontent.com/uphrWz_e_K_pZrPOmCR34A6grxPtva0kM8bhMSgdycrlxiBC7C_JzGtyJLn1mfrRLrg'
+    image: 'assets/img/Simplilearn.jpg'
   },
   'programming-java': {
     title: 'JAVA Technology Stack',
@@ -163,7 +163,7 @@ const certificationData = {
     date: 'November 2024',
     description: 'Complete Java development course covering core concepts and enterprise applications.',
     skills: ['Java', 'Spring Framework', 'JPA', 'RESTful APIs'],
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0I7ghcWdkmRXMHpXmW1ygmpKUetAP5KAJ95SEOGJWnWruRa1Q1NCC4bYBZN38xIfDjyI&usqp=CAU'
+    image: 'assets/img/Infosys-SpringBoard.png'
   },
   'web': {
     title: 'Responsive Web Design',
@@ -179,7 +179,7 @@ const certificationData = {
     date: 'September 2024',
     description: 'Foundation course in Python programming and core computer science concepts.',
     skills: ['Python', 'Data Structures', 'Algorithms', 'Object-Oriented Programming'],
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0yMNy_n0CevcNHSdusd12-bf940f6c758zQ&s'
+    image: 'assets/img/Cisco_Networking_Academy.jpeg'
   },
   'security': {
     title: 'Introduction to Cybersecurity',
@@ -187,7 +187,7 @@ const certificationData = {
     date: 'August 2024',
     description: 'Comprehensive introduction to cybersecurity principles and best practices.',
     skills: ['Network Security', 'Risk Management', 'Threat Assessment', 'Security Protocols'],
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0yMNy_n0CevcNHSdusd12-bf940f6c758zQ&s'
+    image: 'assets/img/Cisco_Networking_Academy.jpeg'
   }
 };
 
