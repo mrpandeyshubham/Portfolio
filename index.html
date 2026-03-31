@@ -547,15 +547,13 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" action="mailto:shubham89514@gmail.com" method="POST" enctype="text/plain">
           <div class="contact-group">
-            <input type="text" id="contact-name" class="contact-input" placeholder="Your Name" required>
-            <input type="email" id="contact-email" class="contact-input" placeholder="Your Email" required>
+            <input type="text" name="Name" class="contact-input" placeholder="Your Name" required>
+            <input type="email" name="Email" class="contact-input" placeholder="Your Email" required>
           </div>
-          <textarea id="contact-message" class="contact-textarea" placeholder="Your Message" rows="8"
-            required></textarea>
+          <textarea name="Message" class="contact-textarea" placeholder="Your Message" rows="8" required></textarea>
           <button type="submit" class="button">Send Message</button>
-          <div id="message" class="contact-message"></div>
         </form>
       </div>
     </section>

@@ -242,44 +242,8 @@ window.addEventListener('click', (e) => {
 });
 
 /*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form'),
-contactName = document.getElementById('contact-name'),
-contactEmail = document.getElementById('contact-email'),
-contactMessage = document.getElementById('contact-message'),
-message = document.getElementById('message');
-
-const sendEmail = (e) => {
-  e.preventDefault();
-
-  if(contactName.value === '' || contactEmail.value === '' || contactMessage.value === '') {
-    message.textContent = 'Please fill in all fields';
-    message.style.color = '#ff6b6b';
-
-    setTimeout(() => {
-      message.textContent = '';
-    }, 3000);
-  } else {
-    // Use mailto: to open local email app securely
-    const subject = encodeURIComponent(`Portfolio Contact from ${contactName.value}`);
-    const body = encodeURIComponent(`Name: ${contactName.value}\nEmail: ${contactEmail.value}\n\nMessage:\n${contactMessage.value}`);
-    window.location.href = `mailto:shubham89514@gmail.com?subject=${subject}&body=${body}`;
-
-    message.textContent = 'Opening your email client...';
-    message.style.color = '#51cf66';
-    
-    setTimeout(() => {
-      message.textContent = '';
-    }, 5000);
-
-    contactName.value = '';
-    contactEmail.value = '';
-    contactMessage.value = '';
-  }
-};
-
-if (contactForm) {
-  contactForm.addEventListener('submit', sendEmail);
-}
+// JavaScript intercept removed to appease Google Chrome Safe Browsing heuristics.
+// Form is now handled natively via standard HTML action="mailto:shubham89514@gmail.com"
 
 /*=============== LIGHT/DARK MODE ===============*/
 window.addEventListener('DOMContentLoaded', () => {
