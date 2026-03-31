@@ -23,7 +23,6 @@ if(navClose) {
 const navLink = document.querySelectorAll('.nav-link');
 
 const linkAction = () => {
-  const navMenu = document.getElementById('nav-menu');
   navMenu.classList.remove('show-menu');
 };
 
@@ -33,7 +32,7 @@ navLink.forEach((n) => n.addEventListener('click', linkAction));
 const scrollHeader = () => {
   const header = document.getElementById('header');
   
-  this.scrollY >= 20 ? header.classList.add('scroll-header')
+  window.scrollY >= 20 ? header.classList.add('scroll-header')
   : header.classList.remove('scroll-header');
 };
 
@@ -155,7 +154,7 @@ const certificationData = {
     date: 'December 2024',
     description: 'Comprehensive course covering AI fundamentals and generative AI technologies.',
     skills: ['Generative AI', 'Machine Learning', 'AI Ethics', 'Neural Networks'],
-    image: 'assets/img/Simplilearn.jpg'
+    image: 'assets/img/certs/SimpliLearn.jpg'
   },
   'programming-java': {
     title: 'JAVA Technology Stack',
@@ -163,7 +162,7 @@ const certificationData = {
     date: 'November 2024',
     description: 'Complete Java development course covering core concepts and enterprise applications.',
     skills: ['Java', 'Spring Framework', 'JPA', 'RESTful APIs'],
-    image: 'assets/img/Infosys-SpringBoard.png'
+    image: 'assets/img/certs/Infosys-SpringBoard.png'
   },
   'web': {
     title: 'Responsive Web Design',
@@ -171,7 +170,7 @@ const certificationData = {
     date: 'October 2024',
     description: 'Modern web design principles and responsive development techniques.',
     skills: ['HTML5', 'CSS3', 'Flexbox', 'Grid', 'Media Queries'],
-    image: 'assets/img/FreeCodeCamp.jpg'
+    image: 'assets/img/certs/FreeCodeCamp.jpg'
   },
   'programming-python': {
     title: 'Python Essentials 1',
@@ -179,7 +178,7 @@ const certificationData = {
     date: 'September 2024',
     description: 'Foundation course in Python programming and core computer science concepts.',
     skills: ['Python', 'Data Structures', 'Algorithms', 'Object-Oriented Programming'],
-    image: 'assets/img/Cisco_Networking_Academy.jpeg'
+    image: 'assets/img/certs/Cisco_Networking_Academy.jpeg'
   },
   'security': {
     title: 'Introduction to Cybersecurity',
@@ -187,7 +186,7 @@ const certificationData = {
     date: 'August 2024',
     description: 'Comprehensive introduction to cybersecurity principles and best practices.',
     skills: ['Network Security', 'Risk Management', 'Threat Assessment', 'Security Protocols'],
-    image: 'assets/img/Cisco_Networking_Academy.jpeg'
+    image: 'assets/img/certs/Cisco_Networking_Academy.jpeg'
   }
 };
 
@@ -199,9 +198,9 @@ certificationCards.forEach(card => {
     
     let certKey = category;
     if (category === 'programming') {
-      if (title.includes('JAVA')) {
+      if (title.toLowerCase().includes('java')) {
         certKey = 'programming-java';
-      } else if (title.includes('Python')) {
+      } else if (title.toLowerCase().includes('python')) {
         certKey = 'programming-python';
       }
     }
@@ -260,8 +259,12 @@ const sendEmail = (e) => {
       message.textContent = '';
     }, 3000);
   } else {
-    // Simulate email sending
-    message.textContent = 'Message sent successfully!';
+    // Use mailto: to open local email app securely
+    const subject = encodeURIComponent(`Portfolio Contact from ${contactName.value}`);
+    const body = encodeURIComponent(`Name: ${contactName.value}\nEmail: ${contactEmail.value}\n\nMessage:\n${contactMessage.value}`);
+    window.location.href = `mailto:shubham89514@gmail.com?subject=${subject}&body=${body}`;
+
+    message.textContent = 'Opening your email client...';
     message.style.color = '#51cf66';
     
     setTimeout(() => {

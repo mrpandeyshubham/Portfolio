@@ -652,10 +652,11 @@ textarea {
 }
 
 .education-img {
+  display: inline-block;
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  margin: 0 auto 1rem;
+  margin: 0 0 1rem;
   overflow: hidden;
   border: 4px solid var(--first-color);
 }
@@ -989,7 +990,8 @@ textarea {
     text-align: center;
   }
 
-  .education-container::after {
+  .education-container::after,
+  .education-item::after {
     display: none;
   }
 }
@@ -1023,7 +1025,7 @@ textarea {
   }
 
   .home-title {
-    font-size: 10rem;
+    font-size: 3.5rem;
   }
 
   .home-job {
@@ -1039,8 +1041,46 @@ textarea {
     font-size: 4rem;
   }
 
+  .home-social {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+
+  .about-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .about-item-no {
+    font-size: 1.5rem;
+  }
+
+  .about-details {
+    font-size: 0.75rem;
+  }
+
   .skills-items {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .skills-blob {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skills-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skills-name {
+    font-size: 0.8rem;
+  }
+
+  .skills-level {
+    font-size: 0.65rem;
   }
 
   .cert-modal-content {
