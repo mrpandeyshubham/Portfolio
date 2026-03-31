@@ -997,6 +997,14 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
+  .section {
+    padding-block: 4rem 2rem;
+  }
+
+  .section-title {
+    margin-bottom: 2.5rem;
+  }
+
   .services-container {
     grid-template-columns: 1fr;
   }
